@@ -1,32 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(data) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -53,7 +25,7 @@ function generateHTML(data) {
          height: 100%;
          }
          .wrapper {
-         background-color: ${colors[data.color].wrapperBackground};
+         background-color: #DE9967;
          padding-top: 100px;
          }
          body {
@@ -95,8 +67,8 @@ function generateHTML(data) {
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         background-color: ${colors[data.color].headerBackground};
-         color: ${colors[data.color].headerColor};
+         background-color: #870603;
+         color: white;
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -107,7 +79,7 @@ function generateHTML(data) {
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px solid ${colors[data.color].photoBorderColor};
+         border: 6px solid white;
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
          .photo-header h1, .photo-header h2 {
@@ -148,8 +120,8 @@ function generateHTML(data) {
          .card {
            padding: 20px;
            border-radius: 6px;
-           background-color: ${colors[data.color].headerBackground};
-           color: ${colors[data.color].headerColor};
+           background-color: #870603;
+           color: white;
            margin: 20px;
          }
          
@@ -172,19 +144,19 @@ function generateHTML(data) {
       <div class="wrapper">
   
         <div class="photo-header">
-          <img src="${data.profileimage}" alt="profile-img">
-          <h1>Hello! My name is ${data.username}!</h1>
+          <img src="https://avatars2.githubusercontent.com/u/49298231?v=4" alt="profile-img">
+          <h1>Hello! My name is rforde1!</h1>
   
           <div class="links-nav">
             <ul>
               <li class="nav-link">
-                <h6>${data.location}</h6>
+                <h6>Atlanta, GA</h6>
               </li>
               <li class="nav-link">
-                <h6>${data.html}</h6>
+                <h6>https://github.com/rforde1</h6>
               </li>
               <li class="nav-link">
-                <h6>${data.blog}</h6>
+                <h6></h6>
               </li>
             </ul>
           </div>
@@ -193,19 +165,19 @@ function generateHTML(data) {
         <main>
   
           <div class="container">
-            <h3 style="text-align: center; margin-top: 30px;">${data.bio}</h3>
+            <h3 style="text-align: center; margin-top: 30px;">Currently a student at Georgia Tech Full Stack Developer Bootcamp. </h3>
             <div class="row">
               <div class="col">
                 <div class="card">
-                  <a href="${data.repos}">
+                  <a href="https://api.github.com/users/rforde1/repos">
                     <h3>Repositories</h3>
-                    <h4>${data.public}</h4>
+                    <h4>16</h4>
                   </a>
                 </div>
                 <div class="card">
                   <a href="">
                     <h3>GitHub Stars</h3>
-                    <h4>${data.stars}</h4>
+                    <h4>1</h4>
                   </a>
                 </div>
               </div>
@@ -213,11 +185,11 @@ function generateHTML(data) {
               <div class="col">
                 <div class="card">
                   <h3>Followers</h3>
-                  <h4>${data.followers}</h4>
+                  <h4>7</h4>
                 </div>
                 <div class="card">
                   <h3>Following</h3>
-                  <h4>${data.following}</h4>
+                  <h4>7</h4>
                 </div>
               </div>
             </div>
@@ -225,40 +197,4 @@ function generateHTML(data) {
         </main>
     </body>
   
-    </html>`
-        }
-        module.exports = generateHTML;
-
-      // {
-  //   login: 'rforde1',
-  //   id: 49298231,
-  //   node_id: 'MDQ6VXNlcjQ5Mjk4MjMx',
-  //   avatar_url: 'https://avatars2.githubusercontent.com/u/49298231?v=4',
-  //   gravatar_id: '',
-  //   url: 'https://api.github.com/users/rforde1',
-  //   html_url: 'https://github.com/rforde1',
-  //   followers_url: 'https://api.github.com/users/rforde1/followers',
-  //   following_url: 'https://api.github.com/users/rforde1/following{/other_user}',
-  //   gists_url: 'https://api.github.com/users/rforde1/gists{/gist_id}',
-  //   starred_url: 'https://api.github.com/users/rforde1/starred{/owner}{/repo}',
-  //   subscriptions_url: 'https://api.github.com/users/rforde1/subscriptions',
-  //   organizations_url: 'https://api.github.com/users/rforde1/orgs',
-  //   repos_url: 'https://api.github.com/users/rforde1/repos',
-  //   events_url: 'https://api.github.com/users/rforde1/events{/privacy}',
-  //   received_events_url: 'https://api.github.com/users/rforde1/received_events',
-  //   type: 'User',
-  //   site_admin: false,
-  //   name: 'Rami Forde',
-  //   company: 'Georgia Tech',
-  //   blog: '',
-  //   location: 'Atlanta, GA',
-  //   email: null,
-  //   hireable: null,
-  //   bio: 'Currently a student at Georgia Tech Full Stack Developer Bootcamp. ',
-  //   public_repos: 16,
-  //   public_gists: 0,
-  //   followers: 7,
-  //   following: 7,
-  //   created_at: '2019-04-05T03:35:49Z',
-  //   updated_at: '2020-02-19T02:22:05Z'
-  // }
+    </html>
